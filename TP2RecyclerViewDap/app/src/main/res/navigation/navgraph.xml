@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/loginScreenFragment">
+    <fragment
+        android:id="@+id/recycleryugiohFragment"
+        android:name="com.example.tp2_recyclerviewdap.Fragments.RecycleryugiohFragment"
+        android:label="RecycleryugiohFragment" />
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.tp2_recyclerviewdap.Fragments.CreateUserFragment"
+        android:label="fragment_create_user"
+        tools:layout="@layout/fragment_create_user" >
+        <action
+            android:id="@+id/action_createUserFragment_to_loginScreenFragment2"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.tp2_recyclerviewdap.Fragments.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_recycleryugiohFragment"
+            app:destination="@id/recycleryugiohFragment" />
+    </fragment>
+</navigation>
